@@ -1,6 +1,8 @@
 <?php
 
-$name = $_POST["name"];
+$name = $_POST[$name];
+$nameup = $_POST["name"];
+$message = $_POST["message"];
 
 $host = "127.0.0.1";
 $db_name = "message_db";
@@ -14,7 +16,7 @@ $conn = mysqli_connect(
     $db_name
 );
 
-$sql = "UPDATE `message` SET lastname='Doe' WHERE id=2";
+$sql = "UPDATE `message` SET `name`='$nameup', `message`='$message' WHERE `name` = '$name'";
 
 if (mysqli_query($conn, $sql)) {
   echo "Record updated successfully";
