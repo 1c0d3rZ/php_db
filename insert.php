@@ -13,7 +13,7 @@ if (!$terms) {
 $host = "127.0.0.1";
 $db_name = "message_db";
 $user = "root";
-$pass = "maak";
+$pass = "";
 
 $conn = mysqli_connect(
     $host,
@@ -37,6 +37,24 @@ mysqli_stmt_bind_param($stmt, "ssii", $name, $message, $priority, $type);
 
 mysqli_stmt_execute($stmt);
 
-echo "Record Saved";
-
 ?>
+
+<html>
+    <head>
+        <title>Record Status</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css">
+    </head>
+    <body>
+        <h1>Record Status</h1>
+        <p> 
+            <?php echo "Record Saved!"; ?>
+        </p>
+        <form action="select.php" method="post">
+        <label for="name">
+        <h3>Want to search for an user?  Type the name here:</h3>
+        </label>
+        <input type="text" name="name">
+        <input type="submit" value="Send">
+        </form>
+    </body>
+</html>
