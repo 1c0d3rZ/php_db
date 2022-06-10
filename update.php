@@ -1,7 +1,7 @@
 <?php
 
-$name = $_POST[$name];
-$nameup = $_POST["name"];
+$id = $_POST["id"];
+$name = $_POST["name"];
 $message = $_POST["message"];
 
 $host = "127.0.0.1";
@@ -16,7 +16,7 @@ $conn = mysqli_connect(
     $db_name
 );
 
-$sql = "UPDATE `message` SET `name`='$nameup', `message`='$message' WHERE `name` = '$name'";
+$sql = "UPDATE `message` SET `name`='$name', `body`='$message' WHERE `id` = '$id'";
 
 if (mysqli_query($conn, $sql)) {
   echo "Record updated successfully";
@@ -26,3 +26,11 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 ?>
+
+<html>
+    <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css">
+    </head>
+    <h3>Home Page </h3>
+    <button><a href="form.html" style="color: blue;text-decoration:none;">Go</a></button>
+</html>

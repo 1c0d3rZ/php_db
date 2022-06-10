@@ -35,7 +35,7 @@ $row = mysqli_fetch_assoc($result);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="main.css"> -->²
+    <!-- <link rel="stylesheet" href="main.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css">
     <title>Update</title>
 </head>
@@ -44,9 +44,10 @@ $row = mysqli_fetch_assoc($result);
     <h1>Update</h1>
 
     <form action="update.php" method="post">
-        <p>Current name : <?php echo $row['name']; $name = $row['name']; ?></p>
+        <label for="text">Your id : </label>
+        <input type="text" name="id" value="<?php echo $row['id'];?>">
         <label for="name">Name : </label>
-        <input type="text" name="nameupdate" value="<?php echo $row['name']?>">
+        <input type="text" name="name" value="<?php echo $row['name']?>">
 
         <label for="message">Message :</label>
         <textarea name="message"cols="20" rows="5"><?php echo $row['body']?></textarea>

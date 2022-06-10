@@ -47,7 +47,12 @@ if (mysqli_num_rows($result) > 0) {
 
 <form action="update_show.php" method="post">
   <h2>Want to update an user?</h2>
-  <input type="text" name="update" placeholder="Type here to delete">
+  <input type="text" name="update" placeholder="Type here to update">
+  <input type="submit" value="Update">
+</form>
+<form action="delete.php" method="post">
+  <h2>Want to delete an user?</h2>
+  <input type="text" name="delete" placeholder="Type here to delete">
   <input type="submit" value="Delete">
 </form>
   </body>
