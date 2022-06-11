@@ -44,8 +44,8 @@ $row = mysqli_fetch_assoc($result);
     <h1>Update</h1>
 
     <form action="update.php" method="post">
-        <label for="text">Your id : </label>
-        <input type="text" name="id" value="<?php echo $row['id'];?>">
+        <label for="text">Your id : <code>(unchangeable)</code></label>
+        <input type="text" name="id" readonly value="<?php echo $row['id'];?>">
         <label for="name">Name : </label>
         <input type="text" name="name" value="<?php echo $row['name']?>">
 
@@ -58,6 +58,14 @@ $row = mysqli_fetch_assoc($result);
     <?php } else {
   echo "0 results";
 } ?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css">
+    <title>Update</title>
+</head>
 </body>
 
 </html>

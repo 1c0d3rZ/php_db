@@ -58,6 +58,16 @@ mysqli_stmt_execute($stmt);
         <input type="text" name="name">
         <input type="submit" value="Send">
     </form>
+    <form action="update_show.php" method="post">
+        <h2>Want to update an user?</h2>
+        <input type="text" name="update" placeholder="Type here to update">
+        <input type="submit" value="Update">
+    </form>
+    <form action="delete.php" method="post">
+        <h2>Want to delete an user?</h2>
+        <input type="text" name="delete" placeholder="Type here to delete">
+        <input type="submit" value="Delete">
+    </form>
     <h3>Home Page </h3>
     <button><a href="form.html" style="color: blue;text-decoration:none;">Go</a></button>
 

@@ -19,7 +19,7 @@
         <input type="text" name="name" placeholder="Name">
 
         <label for="message">Message :</label>
-        <textarea name="message"cols="20" rows="5" placeholder="Message here ..."></textarea>
+        <textarea name="message" cols="20" rows="5" placeholder="Message here ..."></textarea>
 
         <br>
 
@@ -49,6 +49,17 @@
         </label>
         <br>
         <button>Send</button>
+    </form>
+
+    <form action="update_show.php" method="post">
+        <h2>Want to update an user?</h2>
+        <input type="text" name="update" placeholder="Type here to update">
+        <input type="submit" value="Update">
+    </form>
+    <form action="delete.php" method="post">
+        <h2>Want to delete an user?</h2>
+        <input type="text" name="delete" placeholder="Type here to delete">
+        <input type="submit" value="Delete">
     </form>
 </body>
 
