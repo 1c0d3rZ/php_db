@@ -16,7 +16,7 @@ $conn = mysqli_connect(
   $db_name
 );
 
-$sql = "UPDATE `message` SET `name`='$name', `body`='$message' WHERE `id` = '$id'";
+$sql = "UPDATE `message` SET `name`='$name', `body`='$message' WHERE `id` = $id";
 
 if (mysqli_query($conn, $sql)) {
   echo "Record updated successfully";
